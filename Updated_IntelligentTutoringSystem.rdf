@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/akshay/ontologies/2024/11/IntelligentTutoringSystem/"
+         xmlns="http://www.semanticweb.org/akshay/ontologies/2024/11/IntelligentTutoringSystem/">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/akshay/ontologies/2024/11/IntelligentTutoringSystem">
+  <rdfs:comment xml:lang="en">This is Ontology of Intelligent Tutoring System</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="belongstouser">
+  <rdfs:domain rdf:resource="Activity"/>
+  <rdfs:range rdf:resource="User"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="hasActivity">
+  <rdfs:domain rdf:resource="TutoringDomain"/>
+  <rdfs:range rdf:resource="Activity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="providesfeedback">
+  <rdfs:domain rdf:resource="Activity"/>
+  <rdfs:range rdf:resource="Feedback"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="teaches">
+  <rdfs:domain rdf:resource="Activity"/>
+  <rdfs:range rdf:resource="Concept"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="difficultylevel">
+  <rdfs:domain rdf:resource="Activity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain rdf:resource="Concept"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="performance">
+  <rdfs:domain rdf:resource="Student"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_side">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_base">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_height">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_radius">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="Activity"/>
+
+<owl:Class rdf:about="User"/>
+
+<owl:Class rdf:about="TutoringDomain"/>
+
+<owl:Class rdf:about="Feedback"/>
+
+<owl:Class rdf:about="Concept"/>
+
+<owl:Class rdf:about="Student">
+  <rdfs:subClassOf rdf:resource="User"/>
+</owl:Class>
+
+<owl:Class rdf:about="Algebra">
+  <rdfs:subClassOf rdf:resource="Math"/>
+</owl:Class>
+
+<owl:Class rdf:about="Math">
+  <rdfs:subClassOf rdf:resource="TutoringDomain"/>
+</owl:Class>
+
+<owl:Class rdf:about="Area">
+  <rdfs:subClassOf rdf:resource="Concept"/>
+</owl:Class>
+
+<owl:Class rdf:about="Calculas">
+  <rdfs:subClassOf rdf:resource="Math"/>
+</owl:Class>
+
+<owl:Class rdf:about="Chemistry">
+  <rdfs:subClassOf rdf:resource="TutoringDomain"/>
+</owl:Class>
+
+<owl:Class rdf:about="Correct">
+  <rdfs:subClassOf rdf:resource="Feedback"/>
+</owl:Class>
+
+<owl:Class rdf:about="Geometry">
+  <rdfs:subClassOf rdf:resource="Math"/>
+</owl:Class>
+
+<owl:Class rdf:about="Hints">
+  <rdfs:subClassOf rdf:resource="Feedback"/>
+</owl:Class>
+
+<owl:Class rdf:about="Incorrect">
+  <rdfs:subClassOf rdf:resource="Feedback"/>
+</owl:Class>
+
+<owl:Class rdf:about="Physics">
+  <rdfs:subClassOf rdf:resource="TutoringDomain"/>
+</owl:Class>
+
+<owl:Class rdf:about="PracticeProblem">
+  <rdfs:subClassOf rdf:resource="Activity"/>
+</owl:Class>
+
+<owl:Class rdf:about="Quiz">
+  <rdfs:subClassOf rdf:resource="Activity"/>
+</owl:Class>
+
+<owl:Class rdf:about="Teacher">
+  <rdfs:subClassOf rdf:resource="User"/>
+</owl:Class>
+
+<owl:Class rdf:about="Totorial">
+  <rdfs:subClassOf rdf:resource="Activity"/>
+</owl:Class>
+
+<owl:Class rdf:about="Volume">
+  <rdfs:subClassOf rdf:resource="Concept"/>
+</owl:Class>
+
+<owl:Class rdf:about="Shape">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="Square">
+  <rdfs:subClassOf rdf:resource="Shape"/>
+</owl:Class>
+
+<owl:Class rdf:about="Triangle">
+  <rdfs:subClassOf rdf:resource="Shape"/>
+</owl:Class>
+
+<owl:Class rdf:about="Circle">
+  <rdfs:subClassOf rdf:resource="Shape"/>
+</owl:Class>
+
+
+</rdf:RDF>
